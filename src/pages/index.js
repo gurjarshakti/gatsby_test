@@ -1,13 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
 
+
+import Nav from "../components/navbar"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Header from "../components/header"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Nav/>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -21,4 +26,6 @@ const IndexPage = () => (
   </Layout>
 )
 
+ReactDOM.render (<Nav/>,document.getElementById("root"));
+serviceWorker.unregister();
 export default IndexPage
